@@ -1,9 +1,12 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace ACM.BL
 {
     public class Customer
     {
+        //properties
+
         public int CustomerId{// can only be set internally within the class
             get;
             private set;
@@ -12,6 +15,8 @@ namespace ACM.BL
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public string EmailAddress { get; set; }
+
+        public static int InstanceCount { get; set; }
 
         public string FullName
         {
@@ -30,6 +35,35 @@ namespace ACM.BL
             }
         }
 
-        public static int InstanceCount { get; set; }
+        //methods
+
+        public bool Validate()
+        {
+            bool isValid = true;
+
+            if (string.IsNullOrWhiteSpace(LastName)) isValid = false;
+            if (string.IsNullOrWhiteSpace(EmailAddress)) isValid = false;
+
+            return isValid;
+        }
+
+        public Customer Retrieve(int customerID)
+        {
+            //code that retrieves specific customer
+            return new Customer();
+        }
+
+        public List<Customer> Retrieve()
+        {
+            //returns all Customers
+            return new List<Customer>();
+        }
+
+        public bool Save()
+        {
+            //code that saves the defined customer
+            return true;
+        }
+
     }
 }
