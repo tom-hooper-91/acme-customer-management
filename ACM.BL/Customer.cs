@@ -5,6 +5,18 @@ namespace ACM.BL
 {
     public class Customer
     {
+        //constructors
+        
+        public Customer()
+        {
+
+        }
+
+        public Customer(int customerId)
+        {
+            CustomerId = customerId;
+        }
+
         //properties
 
         public int CustomerId{// can only be set internally within the class
