@@ -17,7 +17,7 @@ namespace ACM.BL
         {
             get
             {
-                return FirstName + "," + LastName;
+                return FirstName + ", " + LastName;
             }
         }
     }
