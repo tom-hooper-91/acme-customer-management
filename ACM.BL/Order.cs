@@ -6,13 +6,14 @@ namespace ACM.BL
     public class Order
     {
         //constructors
-        public Order()
+        public Order() : this(0)
         {
         }
 
         public Order(int orderId)
         {
             OrderId = orderId;
+            OrderItems = new List<OrderItem>();
         }
 
         //properties
@@ -21,7 +22,11 @@ namespace ACM.BL
             get;
             private set;
         }
+        public int CustomerId { get; set; }
         public DateTimeOffset? OrderDate { get; set; }
+        public int ShippingAddressId { get; set; }
+
+        public List<OrderItem> OrderItems { get; set; }
 
         //methods
 
