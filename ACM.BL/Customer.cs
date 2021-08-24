@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace ACM.BL
 {
-    public class Customer
+    public class Customer : EntityBase
     {
         //constructors
         
@@ -53,7 +53,7 @@ namespace ACM.BL
 
         //methods
 
-        public bool Validate()
+        public override bool Validate()
         {
             bool isValid = true;
 
