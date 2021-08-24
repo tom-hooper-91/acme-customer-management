@@ -33,23 +33,5 @@ namespace ACM.BL
 
             return isValid;
         }
-
-        public Order Retrieve(int orderId)
-        {
-            //code to locate Order
-            return new Order();
-        }
-
-        public List<Order> Retrieve()
-        {
-            //code to return all Orders
-            return new List<Order>();
-        }
-
-        public bool Save()
-        {
-            //code to save current Order
-            return true;
-        }
     }
 }
