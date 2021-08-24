@@ -10,6 +10,11 @@ namespace ACM.BL
         {
         }
 
+        public Product(int productId)
+        {
+            ProductId = productId;
+        }
+
         //properties
 
         public int ProductId
