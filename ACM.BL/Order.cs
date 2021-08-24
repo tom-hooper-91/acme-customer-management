@@ -21,14 +21,17 @@ namespace ACM.BL
             get;
             private set;
         }
-        public DateTime OrderDate { get; set; }
+        public DateTimeOffset? OrderDate { get; set; }
 
         //methods
 
         public bool Validate()
         {
-            //code to validate
-            return true;
+            bool isValid = true;
+
+            if (OrderDate == null) isValid = false;
+
+            return isValid;
         }
 
         public Order Retrieve(int orderId)

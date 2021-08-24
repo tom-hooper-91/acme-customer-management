@@ -21,15 +21,21 @@ namespace ACM.BL
             get;
             private set;
         }
-        public Product product { get; set; }
-        public int PurchasePrice { get; set; }
+        public int ProductId { get; set; }
+        public decimal? PurchasePrice { get; set; }
+        public int Quantity { get; set; }
 
         //methods
 
         public bool Validate()
         {
-            //code to validate
-            return true;
+            bool isValid = true;
+
+            if (ProductId <= 0) isValid = false;
+            if (Quantity <= 0) isValid = false;
+            if (PurchasePrice == null) isValid = false;
+
+            return isValid;
         }
 
         public OrderItem Retrieve(int orderItemId)

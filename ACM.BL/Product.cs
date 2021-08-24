@@ -24,7 +24,7 @@ namespace ACM.BL
         }
         public string ProductName { get; set; }
         public string Description { get; set; }
-        public int CurrentPrice { get; set; }
+        public decimal? CurrentPrice { get; set; }
 
         //methods
 
@@ -33,7 +33,7 @@ namespace ACM.BL
             bool isValid = true;
 
             if (string.IsNullOrWhiteSpace(ProductName)) isValid = false;
-            if (CurrentPrice <= 0) isValid = false;
+            if (CurrentPrice == null) isValid = false;
 
             return isValid;
         }
