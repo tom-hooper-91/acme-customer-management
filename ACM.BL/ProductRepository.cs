@@ -22,6 +22,10 @@ namespace ACM.BL
                 
             }
 
+            Object myObject = new Object();
+            Console.WriteLine($"Object: {myObject.ToString()}");
+            Console.WriteLine($"Product: {product.ToString()}");
+
             return product;
         }
 

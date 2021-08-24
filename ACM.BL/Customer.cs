@@ -28,6 +28,8 @@ namespace ACM.BL
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public string EmailAddress { get; set; }
+        public int CustomerType { get; set; }
+
         public List<Address> AddressList { get; set; }
 
         public static int InstanceCount { get; set; }
@@ -60,5 +62,7 @@ namespace ACM.BL
 
             return isValid;
         }
+
+        public override string ToString() => FullName;
     }
 }

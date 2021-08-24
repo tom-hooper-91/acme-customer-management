@@ -37,5 +37,7 @@ namespace ACM.BL
 
             return isValid;
         }
+
+        public override string ToString() => ProductName;// overiding the base method. This is helpful for debugging as the debugger uses the method to display object name
     }
 }
