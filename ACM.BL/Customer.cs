@@ -7,7 +7,7 @@ namespace ACM.BL
     {
         //constructors
         
-        public Customer()
+        public Customer() : this(0)//invokes the overloaded constructor
         {
 
         }
@@ -15,6 +15,7 @@ namespace ACM.BL
         public Customer(int customerId)
         {
             CustomerId = customerId;
+            AddressList = new List<Address>();
         }
 
         //properties
@@ -27,6 +28,7 @@ namespace ACM.BL
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public string EmailAddress { get; set; }
+        public List<Address> AddressList { get; set; }
 
         public static int InstanceCount { get; set; }
 

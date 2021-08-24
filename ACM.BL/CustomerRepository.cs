@@ -1,8 +1,23 @@
 ﻿using System;
+using System.Linq;
+
 namespace ACM.BL
 {
     public class CustomerRepository
     {
+        //constructors
+
+        public CustomerRepository()
+        {
+            addressRepository = new AddressRepository();
+        }
+
+        //properties
+
+        private AddressRepository addressRepository { get; set; }
+
+        //methods
+
         public Customer Retrieve (int customerId)
         {
             //Create instance of the Customer class
@@ -19,6 +34,7 @@ namespace ACM.BL
                 customer.FirstName = "Frodo";
                 customer.LastName = "Baggins";
                 customer.EmailAddress = "fbaggins@hobbiton.me";
+                customer.AddressList = addressRepository.RetrieveByCustomerId(customerId).ToList();
             }
 
             return customer;
