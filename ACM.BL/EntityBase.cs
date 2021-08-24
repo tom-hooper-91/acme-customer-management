@@ -17,9 +17,6 @@ namespace ACM.BL
         }
         public bool IsValid => Validate();
 
-        public virtual bool Validate()
-        {
-            throw new NotImplementedException();
-        }
+        public abstract bool Validate();       
     }
 }
