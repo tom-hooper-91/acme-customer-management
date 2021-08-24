@@ -58,24 +58,5 @@ namespace ACM.BL
 
             return isValid;
         }
-
-        public Customer Retrieve(int customerID)
-        {
-            //code that retrieves specific customer
-            return new Customer();
-        }
-
-        public List<Customer> Retrieve()
-        {
-            //returns all Customers
-            return new List<Customer>();
-        }
-
-        public bool Save()
-        {
-            //code that saves the defined customer
-            return true;
-        }
-
     }
 }
