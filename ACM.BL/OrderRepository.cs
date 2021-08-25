@@ -22,10 +22,30 @@ namespace ACM.BL
             return order;
         }
 
-        public bool Save()
+        public bool Save(Order order)
         {
-            //code that saves the defined Order
-            return true;
+            var success = true;
+
+            if (order.HasChanged)
+            {
+                if (order.IsValid)
+                {
+                    if (order.IsNew)
+                    {
+                        //call an insert stored procedure
+                    }
+                    else
+                    {
+                        //call an update stored procedure
+                    }
+                }
+                else
+                {
+                    success = false;
+                }
+            }
+
+            return success;
         }
     }
 }
