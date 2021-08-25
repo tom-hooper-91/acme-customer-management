@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using Acme.Common;
 
 namespace ACM.BL
 {
@@ -26,7 +27,10 @@ namespace ACM.BL
         private string productName;
         public string ProductName
         {
-            get { return productName; }
+            get
+            {
+                return StringHandler.InsertSpaces(productName);
+            }
             set { productName = value; }
         }
         
