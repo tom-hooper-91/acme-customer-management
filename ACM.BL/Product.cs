@@ -22,7 +22,14 @@ namespace ACM.BL
             get;
             private set;
         }
-        public string ProductName { get; set; }
+
+        private string productName;
+        public string ProductName
+        {
+            get { return productName; }
+            set { productName = value; }
+        }
+        
         public string Description { get; set; }
         public decimal? CurrentPrice { get; set; }
 

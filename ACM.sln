@@ -9,6 +9,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{1BE63910
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ACM.BLTest", "ACM.BLTest\ACM.BLTest.csproj", "{9045ABA3-DF60-4D7B-9E71-C8796CEE262C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Acme.Common", "Acme.Common\Acme.Common.csproj", "{FAAC7BF8-FADB-4499-8E41-C3E5379DA61F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -23,6 +25,10 @@ Global
 		{9045ABA3-DF60-4D7B-9E71-C8796CEE262C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9045ABA3-DF60-4D7B-9E71-C8796CEE262C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9045ABA3-DF60-4D7B-9E71-C8796CEE262C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FAAC7BF8-FADB-4499-8E41-C3E5379DA61F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FAAC7BF8-FADB-4499-8E41-C3E5379DA61F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FAAC7BF8-FADB-4499-8E41-C3E5379DA61F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FAAC7BF8-FADB-4499-8E41-C3E5379DA61F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
