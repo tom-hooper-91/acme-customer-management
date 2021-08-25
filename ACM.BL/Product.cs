@@ -4,7 +4,7 @@ using Acme.Common;
 
 namespace ACM.BL
 {
-    public class Product : EntityBase
+    public class Product : EntityBase, ILoggable
     {
         //constructors
         public Product()
@@ -50,5 +50,7 @@ namespace ACM.BL
         }
 
         public override string ToString() => ProductName;// overiding the base method. This is helpful for debugging as the debugger uses the method to display object name
+
+        public string Log() => $"{ProductId}: {ProductName} Detail: {Description} Status: {EntityState.ToString()}";
     }
 }
