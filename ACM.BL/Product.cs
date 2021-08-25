@@ -29,7 +29,7 @@ namespace ACM.BL
         {
             get
             {
-                return StringHandler.InsertSpaces(productName);
+                return productName.InsertSpaces();
             }
             set { productName = value; }
         }
