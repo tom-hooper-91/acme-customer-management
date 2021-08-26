@@ -1,5 +1,7 @@
 ﻿using System;
-namespace ACM.BL
+using ACM.BL.Entities;
+
+namespace ACM.BL.Repositories
 {
     public class ProductRepository
     {

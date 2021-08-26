@@ -1,8 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using ACM.BL.Entities;
 using Acme.Common;
 
-namespace ACM.BL
+namespace ACM.BL.Entities
 {
     public class Product : EntityBase, ILoggable
     {

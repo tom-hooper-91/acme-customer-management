@@ -1,5 +1,4 @@
-﻿using System;
-namespace ACM.BL
+﻿namespace ACM.BL.Entities
 {
     public enum EntityStateOption
     {

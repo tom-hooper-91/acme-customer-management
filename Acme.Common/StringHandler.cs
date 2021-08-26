@@ -32,16 +32,16 @@ namespace Acme.Common
 
         public static string FormatPersonsName(string firstName, string lastName)
         {
-            string fullname = firstName;
+            string fullName = firstName;
             if (!string.IsNullOrWhiteSpace(firstName))
             {
-                if (!string.IsNullOrWhiteSpace(fullname))
+                if (!string.IsNullOrWhiteSpace(fullName))
                 {
-                    fullname += ", ";
+                    fullName += ", ";
                 }
-                fullname += firstName;
+                fullName += firstName;
             }
-            return fullname;
+            return fullName;
         }
     }
 }

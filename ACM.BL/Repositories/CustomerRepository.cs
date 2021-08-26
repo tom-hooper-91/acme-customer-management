@@ -1,7 +1,7 @@
-﻿using System;
-using System.Linq;
+﻿using System.Linq;
+using ACM.BL.Entities;
 
-namespace ACM.BL
+namespace ACM.BL.Repositories
 {
     public class CustomerRepository
     {

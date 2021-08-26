@@ -1,4 +1,5 @@
 ﻿using ACM.BL;
+using ACM.BL.Entities;
 using Xunit;
 
 namespace ACM.BLTest

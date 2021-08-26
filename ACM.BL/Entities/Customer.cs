@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using Acme.Common;
 
-namespace ACM.BL
+namespace ACM.BL.Entities
 {
     public class Customer : EntityBase, ILoggable
     {

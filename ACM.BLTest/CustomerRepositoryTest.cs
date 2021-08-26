@@ -1,6 +1,8 @@
 ﻿// BA That using directive wasn't being used so you may as well yeet it :)
 using System.Collections.Generic;
 using ACM.BL;
+using ACM.BL.Entities;
+using ACM.BL.Repositories;
 using Xunit;
 
 namespace ACM.BLTest
