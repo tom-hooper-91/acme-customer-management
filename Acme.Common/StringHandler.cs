@@ -29,5 +29,19 @@ namespace Acme.Common
             result = result.Trim();
             return result;
         }
+
+        public static string FormatPersonsName(string firstName, string lastName)
+        {
+            string fullname = firstName;
+            if (!string.IsNullOrWhiteSpace(firstName))
+            {
+                if (!string.IsNullOrWhiteSpace(fullname))
+                {
+                    fullname += ", ";
+                }
+                fullname += firstName;
+            }
+            return fullname;
+        }
     }
 }

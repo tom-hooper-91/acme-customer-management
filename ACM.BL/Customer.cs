@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using Acme.Common;
 
 namespace ACM.BL
@@ -23,7 +22,7 @@ namespace ACM.BL
 
         public int CustomerId{// can only be set internally within the class
             get;
-            private set;
+            // BA I think 'private set;' is implicit in c# (recent version)
         }
 
         public string FirstName { get; set; }
@@ -35,37 +34,21 @@ namespace ACM.BL
 
         public static int InstanceCount { get; set; }
 
-        public string FullName
-        {
-            get
-            {
-                string fullname = LastName;
-                if (!string.IsNullOrWhiteSpace(FirstName))
-                {
-                    if (!string.IsNullOrWhiteSpace(fullname))
-                    {
-                        fullname += ", ";
-                    }
-                    fullname += FirstName;
-                }
-                return fullname;
-            }
-        }
+        /* BA moving the logic out of Customer means you can keep Customer smaller. I debated whether name-related logic is sufficiently
+         specific to customer that it *should* stay in here for a while but eventually decided that it's probably better moved out. Whether
+        StringHandler is the right place for it is another question - it's not really to do with strings but with names spefically. */
+        public string FullName => StringHandler.FormatPersonsName(FirstName, LastName);
 
         //methods
 
         public override bool Validate()
         {
-            bool isValid = true;
-
-            if (string.IsNullOrWhiteSpace(LastName)) isValid = false;
-            if (string.IsNullOrWhiteSpace(EmailAddress)) isValid = false;
-
-            return isValid;
+            // BA You could write this method more tersely. It might be *less* readable the way I've written it though.
+            return !(string.IsNullOrWhiteSpace(LastName) || string.IsNullOrWhiteSpace(EmailAddress));
         }
 
         public override string ToString() => FullName;
 
-        public string Log() => $"{CustomerId}: {FullName} Email: {EmailAddress} Status: {EntityState.ToString()}";
+        public string Log() => $"{CustomerId}: {FullName} Email: {EmailAddress} Status: {EntityState}";
     }
 }
