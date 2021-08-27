@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace ACM.BL
+namespace ACM.BL.Entities
 {
     public class Order : EntityBase
     {

@@ -1,7 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
+using ACM.BL.Entities;
 
-namespace ACM.BL
+namespace ACM.BL.Repositories
 {
     public class AddressRepository
     {
